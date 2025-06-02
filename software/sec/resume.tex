@@ -1,0 +1,212 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape MARCELO PONCE} \\ \vspace{1pt}
+    \small Toronto, ON \\
+    \small (587)~$\cdot$~718~$\cdot$~6272 $\diamond$ \href{mailto:marcelo.ponce@mail.utoronto.ca}{\underline{marcelo.ponce@mail.utoronto.ca}} $\diamond$
+    \href{https://github.com/marceloponceardon}{\underline{github.com/marceloponceardon}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Toronto}{Mississauga, ON}
+      {Honours Bachelor of Science (HBSc) in Computer Science, Minor in Mathematics}{September 2019 -- June 2025} \\
+      \vspace{8pt}
+      \textbf{Relevant Coursework:}
+      \noexpandtab
+      \resumeItemListStart
+	      \resumeItem{CSC427: Computer Security}
+%	      \resumeItem{CSC413: Neural Networks \& Deep Learning}
+%	      \resumeItem{CSC409: Scalable Computing}
+%	      \resumeItem{CSC373: Algorithm Design, Analysis \& Complexity}
+%	      \resumeItem{CSC367: Parallel Programming}
+	      \resumeItem{CSC347: Introduction to Information Security}
+%	      \resumeItem{CSC343: Introduction to Databases}
+	      \resumeItem{CSC309: Programming on the Web}
+	      \resumeItem{CSC301: Introduction to Software Engineering}
+	      \resumeItem{MAT302: Introduction to Algebraic Cryptography}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{\href{https://github.com/marceloponceardon/CTF427}{CTF427}} $\diamond$ \emph{VirtualBox, PostgreSQL, Docker, CTFd, Express, Kali Linux}}{\emph{Jan. 2025 -- March 2025}}
+          \resumeItemListStart
+	  \resumeItem{Designed a competitive Capture the Flag (CTF) event designed to teach students about common security vulnerabilities, exploit techniques and challenges (SQLi, Cryptography, Vulnerable Executables, Forensics)}
+	  \resumeItem{Developed Challenges using various programming languages and tools.}
+	  \resumeItem{Created a web-based platform using CTFd to host the event.}
+	  \resumeItem{Taught students how to use Kali Linux as well as standard Linux tools for relevant challenges.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+      {\textbf{\href{https://github.com/marceloponceardon/jules-ferguson.com}{jules-ferguson.com}} $\diamond$ \emph{Node.js, Express, HTML/CSS, Vercel, Render, GitHub Actions} }{\emph{June 2024 -- Ongoing}}
+	  \resumeItemListStart
+	  \resumeItem{Built a personal website for Jules Ferguson, a Toronto-based photographer and sexual health educator.}
+	  \resumeItem{Coordinated alongside client for site design and functionality.}
+	  \resumeItem{Developed a RESTful API using Node.js and Express.}
+	  \resumeItem{Integrated GitHub Actions for CI/CD.}
+	  \resumeItem{Hosted on Vercel and Render.}
+	  \resumeItemListEnd
+      \resumeProjectHeading
+      {\textbf{\href{https://github.com/opalescencelabs}{Opalescence}} $\diamond$ \emph{Go, PostgreSQL, Redis, Docker, GitHub Actions, Google OAuth2.0.}}{\emph{Jan. 2024 -- April 2024}}
+          \resumeItemListStart
+	  \resumeItem{Worked in a team of 7 to design and build a web-based sharable note-taking application.}
+	  \resumeItem{Implemented a RESTful API using GoLang (GinGonic) and PostgreSQL (GORM), with hosted Redis for caching.}
+	  \resumeItem{Integrated GitHub Actions for CI/CD.}
+	  \resumeItem{Google OAuth2.0 for user authentication.}
+	  \resumeItem{Hosted on Vercel, Render, and ElephantSQL.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+	\textbf{Programming Languages:} Python, C/C++, Java, Go, SQL, HTML/CSS, JavaScript \\
+	\textbf{Tools \& Technologies:} Docker, RESTful APIs, LaTeX, React, Node.js, Redis \\
+	\textbf{IDEs \& Editors:} Vim, Visual Studio Code, Eclipse \\
+	\textbf{Version Control:} Git, GitHub \\
+	\textbf{Databases:} PostgreSQL, MySQL, SQLite, Cassandra \\
+	\textbf{CI/CD:} Github Actions \\
+	\textbf{Other Skills \& Tools:} Linux, Data Modeling, Automated Testing, Amazon Web Services (AWS) Agile Development, Scrum
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Barista}{March 2023 -- Present}
+      {Claudia's Coffee}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Prepared custom espresso drinks and specialty seasonal beverages in a fast paced environment, making up to 45 drinks per hour.}
+	\resumeItem{Maintained and cleaned equipment daily, ensuring machine longevity and beverage quality.}
+	\resumeItem{Adjusted espresso grind at various times throughout the day to maintain consistent shot quality.}
+	\resumeItem{Opening and closing independently of supervision, cash handling, ordering inventory, arming alarms.}
+	\resumeItem{Developed relationships with customers, connecting management with local businesses.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
