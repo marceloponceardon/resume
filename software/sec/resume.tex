@@ -18,6 +18,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{ragged2e}
 \input{glyphtounicode}
 
 
@@ -101,6 +102,7 @@
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ORDER: Summary, Education, Experience, Projects, Skills
 
 
 \begin{document}
@@ -112,121 +114,130 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape MARCELO PONCE} \\ \vspace{1pt}
-    \small Toronto, ON \\
-    \small (587)~$\cdot$~718~$\cdot$~6272 $\Diamond$ \href{mailto:marcelo.ponce.ardon@gmail.com}{\underline{marcelo.ponce.ardon@gmail.com}} $\Diamond$
-    \href{https://github.com/marceloponceardon}{\underline{github.com/marceloponceardon}}
+	\textbf{\Huge \scshape MARCELO PONCE ARDON} {\small (they/them)} \\ \vspace{1pt}
+    \small Toronto, ON $\Diamond$
+    \small \href{mailto:marcelo.ponce@alumni.utoronto.ca}{\underline{marcelo.ponce@alumni.utoronto.ca}} $\Diamond$
+    \href{https://github.com/marceloponceardon}{\underline{github.com}} $\Diamond$ (587)~$\cdot$~718~$\cdot$~6272
 \end{center}
 
-
+%-----------HIGHLIGHTS OF SKILLS & ACHIEVEMENTS-----------
+\section{\textbf{HIGHLIGHT OF QUALIFICATIONS}}
+  % Job Specific stuff
+%\begin{justify}
+%	Recent Computer Science graduate with hands-on experience in full-stack development, API integration, and building scalable web applications across multiple programming languages including Python, TypeScript, and GoLang. Proven ability to design and deploy solutions through CI/CD pipelines, containerization, and cloud technologies. Strong foundation in data management with PostgreSQL, Redis, and various database systems. Experience implementing security best practices, access controls, and optimizing system performance. Skilled at translating technical requirements into functional solutions while collaborating in Agile development environments.
+%\end{justify}
+{\small
+	\resumeItemListStart
+	  \resumeItem{Recent Computer Science graduate specializing in full-stack development and API integration across Python, TypeScript, and GoLang.}
+	  \resumeItem{Designed and deployed scalable solutions using CI/CD pipelines, Docker containerization, and AWS cloud technologies.}
+	  \resumeItem{Experienced in database management with PostgreSQL, Redis, and various SQL systems.}
+	  \resumeItem{Implemented security best practices including access controls, 2FA deployment, and system performance optimization.}
+	  \resumeItem{Strong collaborator in Agile development environments with proven ability to translate technical requirements into functional solutions.}
+	\resumeItemListEnd
+}
 %-----------EDUCATION-----------
-\section{Education}
+  \section{\textbf{EDUCATION}}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Toronto}{Mississauga, ON}
-      {Honours Bachelor of Science (HBSc) in Computer Science, Minor in Mathematics}{June 2025} \\
-      \vspace{8pt}
-      \textbf{Relevant Coursework:} \\
-      {\it
-	      Computer Security,
-	      Neural Networks \& Deep Learning,
-	      Scalable Computing,
-	      Algorithm Design, Analysis \& Complexity,
-	      Parallel Programming,
-	      Introduction to Information Security,
-	      Introduction to Databases,
-	      Programming on the Web,
-	      Introduction to Software Engineering,
-	      Introduction to Algebraic Cryptography
-
-%	      CSC427: Computer Security,
-%	      CSC413: Neural Networks \& Deep Learning,
-%	      CSC409: Scalable Computing,
-%	      CSC373: Algorithm Design, Analysis \& Complexity,
-%	      CSC367: Parallel Programming,
-%	      CSC347: Introduction to Information Security,
-%	      CSC343: Introduction to Databases,
-%	      CSC309: Programming on the Web,
-%	      CSC301: Introduction to Software Engineering,
-%	      MAT302: Introduction to Algebraic Cryptography
-      }
+    \resumeProjectHeading % Shrink this mention gpa if its > 3.3
+    % CHANGE TO: Master of Arts, University of Toronto 2024 - 2026 Area of Specialization: Urban / Economic Geography
+    {\textbf{Honours Bachelor of Science (HBSc) in Computer Science} $\Diamond$ University of Toronto}{\emph{June 2025}} \\
+	\vspace{8pt}
+	\emph{\large Relevant Coursework}: {\small Software Engineering, Programming on the Web, Scalable Computing, Parallel Programming, Computer Security, Neural Networks \& Deep Learning, Algorithm Design, Analysis \& Complexity}
+%	      Introduction to Software Engineering,
+%	      Introduction to Information Security,
+%	      Introduction to Databases,
+%	      Introduction to Algebraic Cryptography
   \resumeSubHeadingListEnd
 
+%-----------EXPERIENCE-----------
+% Move to BELOW Education
+  \section{\textbf{EXPERIENCE}}
+  \resumeSubHeadingListStart
+  % Include Impact, what you accomplished
+  \resumeProjectHeading{\textbf{IT Administrative Support} $\Diamond$ CANVAS Programs}{\emph{Sept. 2025 -- Present}}
+      \resumeItemListStart
+	\resumeItem{Provided IT administrative support for a 14+ person organization, managing user account provisioning and deprovisioning, access controls, and security protocols.}
+	\resumeItem{Deployed security solutions organization-wide including Bitwarden password manager with 2FA and anti-virus software across all devices.}
+	\resumeItem{Designed and implemented role-based access control policies, ensuring staff members had appropriate permissions for software and systems.}
+	\resumeItem{Performed daily troubleshooting for hardware and software issues, minimizing downtime for staff operations.}
+      \resumeItemListEnd
+
+      \resumeProjectHeading{\textbf{Barista} $\Diamond$ Claudia's Coffee}{\emph{March 2023 -- Present}}
+      \resumeItemListStart
+        \resumeItem{Prepared custom espresso drinks and specialty seasonal beverages in a fast paced environment, making up to 45 drinks per hour.}
+        \resumeItem{Opening and closing independently of supervision, cash handling, ordering inventory, arming alarms.}
+        \resumeItem{Developed relationships with customers, connecting management with local businesses.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Projects}
+  \section{\textbf{PROJECTS}}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-      {\textbf{CTF427} $\Diamond$ \textit{\href{https://github.com/marceloponceardon/CTF427}{github.com/marceloponceardon/CTF427}} $\Diamond$ {\footnotesize VirtualBox, Docker, CTFd, Kali Linux}}{\emph{Jan. 2025 -- March 2025}}
-          \resumeItemListStart
+	% Change title to be href insead of additional one
+	% Start with action verb , write what you did, what you accomplished through what you did
+	% Use lots of numbers "Improved x% efficiency, etc."
+	% EX: • Engineered designs for bone screws and ergonomic handles for five implant devices using SolidWorks which were used in final pre-production stage. • Performed tests of implant device parts
+	% EX: Develop creative copy for weekly newsletter, emailing up to 100 educators about upcoming events, with the goal of increasing enrollment in AFCY’s programs. • Deliver arts programming to children by developing interactive activities for use in the program and successfully engaging children in art while providing a safe afterschool activity. Have received strong feedback from school staff and requests for follow-up
+	\resumeProjectHeading{\textbf{\href{https://github.com/marceloponceardon/wikigraph3d}{Wikigraph3d}} $\Diamond$ {\footnotesize Next.js, Typescript, Tailwind CSS}}{\emph{Aug. 2025 -- Present}}
+	\resumeItemListStart
+	    \resumeItem{Built an interactive 3D graph visualization of Wikipedia articles using react-force-graph-3d, enabling spatial exploration of up to 500 interconnected article-nodes.}
+	    \resumeItem{Configured automated code quality tooling including TypeScript strict mode, ESLint, Prettier, and Husky pre-commit hooks to enforce type safety and maintain consistent code standards.}
+	    \resumeItem{Implemented dynamic, cached graph expansion where clicking article links creates new nodes and edges, visualizing the web of related content in real-time.}
+	    \resumeItem{Optimized rendering performance by caching sprites to prevent unnecessary re-renders during node highlighting.}
+	    \resumeItem{Integrated Wikipedia API to fetch and render article content dynamically as users navigate the app.}
+	\resumeItemListEnd
+
+	\resumeProjectHeading{\textbf{\href{https://github.com/marceloponceardon/CTF427}{CTF427}} $\Diamond$ {\footnotesize VirtualBox, Docker, CTFd, Kali Linux}}{\emph{Jan. 2025 -- March 2025}}
+        \resumeItemListStart
 	  \resumeItem{Ran a competitive Capture the Flag (CTF) event designed to teach students about common security vulnerabilities, exploit techniques and challenges (SQLi, Cryptography, Vulnerable Executables, Forensics).}
 	  \resumeItem{Built a vulnerable site which contained the 4 main challenges, used the CTFd platform to host the event with scoreboard, hints and solution walkthroughs.}
 	  \resumeItem{Taught students how to use Kali Linux tools (sqlmap, steghide, gdb, ghidra), alonside Linux tools for challenges.}
 	  \resumeItem{Hosted the two web applications via Docker containers on a VirtualBox VM.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-      {\textbf{jiu-jitsu-autoscoring} $\Diamond$ \textit{\href{https://github.com/jiu-jitsu-autoscoring}{github.com/jiu-jitsu-autoscoring}} $\Diamond$ {\footnotesize Jupyter, PyTorch, Transformers}}{\emph{Jan. 2025 -- Present}}
+        \resumeItemListEnd
+
+	\resumeProjectHeading{\textbf{\href{https://github.com/jiu-jitsu-autoscoring}{jiu-jitsu-autoscoring}} $\Diamond$ {\footnotesize Python, Jupyter, PyTorch, Transformers}}{\emph{Jan. 2025 -- Present}}
           \resumeItemListStart
 	  \resumeItem{Developing a 5-step pipeline of machine learning models to automatically score Brazilian Jiu-Jitsu match videos.}
 	  \resumeItem{Utilizing PyTorch and HuggingFace Transformers to fine-tune pre-trained models for person detection, pose estimation and classification on a dataset of annotated BJJ matches.}
-          \resumeItemListEnd
-      \resumeProjectHeading
-      {\textbf{jules-ferguson.com} $\Diamond$ \textit{\href{https://github.com/marceloponceardon/jules-ferguson.com}{github.com/marceloponceardon/jules-ferguson.com}} $\Diamond$ {\footnotesize React, Express} }{\emph{June 2024 -- Present}}
-	  \resumeItemListStart
-	  \resumeItem{Built a personal website for Jules Ferguson, a Toronto-based photographer and sexual health educator.}
-	  \resumeItem{Coordinated with client to design and implement a custom React-based website, integrating downloadable CV, portfolio, and contact form.}
-	  \resumeItem{Hosted on Vercel and Render.}
-	  \resumeItemListEnd
-      \resumeProjectHeading
-      {\textbf{Opalescence} $\Diamond$ \textit{\href{https://github.com/opalescencelabs}{github.com/opalescencelabs}} $\Diamond$ {\footnotesize GoLang, PostgresSQL, Redis, Google OAuth2.0.}}{\emph{Jan. 2024 -- April 2024}}
-          \resumeItemListStart
+        \resumeItemListEnd
+
+	\resumeProjectHeading{\textbf{\href{https://github.com/opalescencelabs}{Opalescence}} $\Diamond$ {\footnotesize GoLang, PostgresSQL, Redis, Google OAuth2.0.}}{\emph{Jan. 2024 -- April 2024}}
+        \resumeItemListStart
 	  \resumeItem{Co--led a team of 7 to design and build a web-based sharable note-taking application, overseeing backend development.}
 	  \resumeItem{Implemented a RESTful API using GoLang (GinGonic) and PostgreSQL (GORM), with hosted Redis for caching.}
 	  \resumeItem{Integrated GitHub Actions for CI/CD, Google OAuth2.0 for user authentication.}
-          \resumeItemListEnd
+        \resumeItemListEnd
+% CLNX -> Events & Workshops -> UTSG
+% See Calender
+% Press relevant event
+% Register
+% zainabb.khan@mail.utoronto.ca
+%	\resumeProjectHeading{\textbf{jules-ferguson.com} $\Diamond$ \textit{\href{https://github.com/marceloponceardon/jules-ferguson.com}{github.com/marceloponceardon/jules-ferguson.com}} $\Diamond$ {\footnotesize React, Express} }{\emph{June 2024 -- Present}}
+%	  \resumeItemListStart
+%	  \resumeItem{Built a personal website for Jules Ferguson, a Toronto-based photographer and sexual health educator.}
+%	  \resumeItem{Coordinated with client to design and implement a custom React-based website, integrating downloadable CV, portfolio, and contact form.}
+%	  \resumeItem{Hosted on Vercel and Render.}
+%	  \resumeItemListEnd
+%
     \resumeSubHeadingListEnd
 
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+%-----------SKILLS-----------
+% Move to END
+% UOFT Employer Sessions For
+\section{\textbf{SKILLS}}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-	\textbf{Programming Languages:} C/C++, Bash/Shell, Python, JavaScript, Java, GoLang, C\#, SQL, HTML/CSS\\
-	\textbf{Tools \& Technologies:} Wireshark, sqlmap, Ghidra, john the ripper, gdb, scikit-learn, Pandas, NumPy, Docker, LaTeX, React, Node.js\\
-	\textbf{IDEs \& Editors:} Vim, Visual Studio Code, Eclipse \\
-	\textbf{Version Control:} Git, GitHub \\
+	\textbf{Programming Languages:} C/C++, Bash, Python, TypeScript/JavaScript, Java, GoLang, C\#, SQL, HTML/CSS\\
+	\textbf{Frameworks \& Libraries:} Next.js, Node.js, React, scikit-learn, Pandas, NumPy\\
+	\textbf{Tools \& Technologies:} Docker, Git, GitHub, LaTeX, gdb, Jupyter\\
 	\textbf{Databases:} PostgreSQL, MySQL, SQLite, Cassandra, Redis\\
-	\textbf{CI/CD:} Github Actions \\
-	\textbf{Other Skills \& Tools:} Linux, Data Modeling, Automated Testing, Amazon Web Services (AWS) Agile Development, Scrum
+	\textbf{CI/CD:} GitHub Actions\\
+	\textbf{Cloud \& Platforms:} Amazon Web Services (AWS), Linux\\
+	\textbf{Methodologies:} Agile Development, Scrum, Automated Testing\\
+	\textbf{Soft Skills:} Problem-Solving, Team Collaboration, Technical Communication, Client Coordination, Adaptability\\
     }}
  \end{itemize}
 
 
-%-----------EXPERIENCE-----------
-\section{Work Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-    {Barista}{\emph{March 2023 -- Present}}
-      {Claudia's Coffee}{Toronto, ON}
-      \resumeItemListStart
-        \resumeItem{Prepared custom espresso drinks and specialty seasonal beverages in a fast paced environment, making up to 45 drinks per hour.}
-%	\resumeItem{Maintained and cleaned equipment daily, ensuring machine longevity and beverage quality.}
-%	\resumeItem{Adjusted espresso grind at various times throughout the day to maintain consistent shot quality.}
-	\resumeItem{Opening and closing independently of supervision, cash handling, ordering inventory, arming alarms.}
-	\resumeItem{Developed relationships with customers, connecting management with local businesses.}
-      \resumeItemListEnd
-
-%    \resumeSubheading
-%    {Barista}{\emph{Jan. 2022 -- March 2023}}
-%      {Touti Gelati}{Toronto, ON}
-%      \resumeItemListStart
-%      \resumeItem{Prepared over 30 beverages and desserts daily, maintaining high quality and presentation standards.}
-%      \resumeItem{Enhanced customer experience by providing tailored recommendations for gelato and specialty drinks.}
-%      \resumeItem{Managed inventory for daily operations, ensuring availability of ingredients during peak hours.}
-%      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%-------------------------------------------
 \end{document}
