@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins - TIGHTER for 1 page
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+	\textbf{\Huge \scshape MARCELO PONCE ARDON} {\footnotesize (they/them)} \\ \vspace{1pt}
+	\small \textsc{Toronto, ON} $\Diamond$
+    \small \href{mailto:marcelo.ponce@alumni.utoronto.ca}{\underline{marcelo.ponce@alumni.utoronto.ca}} $\Diamond$
+    \href{https://github.com/marceloponceardon}{\underline{github.com}} $\Diamond$ (587)~$\cdot$~718~$\cdot$~6272
+\end{center}
+
+%-----------HIGHLIGHTS OF QUALIFICATIONS-----------
+\section{\textbf{HIGHLIGHT OF QUALIFICATIONS}}
+{\small
+	\resumeItemListStart
+	  \resumeItem{\textbf{Full-stack developer} specializing in TypeScript/Next.js and Python, demonstrated by building Wikigraph3D—an interactive 3D Wikipedia visualization serving 500+ nodes with optimized rendering performance.}
+	  \resumeItem{\textbf{Experienced in machine learning pipelines}, shown by developing a 5-step PyTorch model using HuggingFace Transformers for automated Brazilian Jiu-Jitsu match scoring.}
+	  \resumeItem{\textbf{Proficient in scalable backend architecture}, evidenced by co-leading a team of 7 to build a RESTful API with GoLang, PostgreSQL, Redis caching, and CI/CD automation.}
+	  \resumeItem{\textbf{Passionate about knowledge transfer and security}, as shown by running a competitive CTF event teaching 20+ students about vulnerabilities, exploitation techniques, and Kali Linux tools.}
+	  \resumeItem{\textbf{Practical IT experience} implementing security solutions including organization-wide Bitwarden 2FA deployment and anti-virus rollout across 14+ devices.}
+	\resumeItemListEnd
+}
+
+%-----------EDUCATION-----------
+\section{\textbf{EDUCATION}}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+  {\textbf{Honours Bachelor of Science (HBSc) in Computer Science} $\Diamond$ University of Toronto}{\emph{June 2025}} \\
+  \vspace{4pt}
+  \emph{Relevant Coursework}: {\small Software Engineering, Web Programming, Scalable Computing, Parallel Programming, Computer Security, Neural Networks \& Deep Learning, Algorithm Design \& Complexity}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{\textbf{PROJECTS}}
+  \resumeSubHeadingListStart
+	\resumeProjectHeading{\textbf{\href{https://github.com/marceloponceardon/wikigraph3d}{Wikigraph3D}} $\Diamond$ {\footnotesize Next.js, TypeScript, Tailwind CSS, react-force-graph-3d}}{\emph{Aug. 2025 -- Present}}
+	\resumeItemListStart
+	    \resumeItem{Built interactive 3D Wikipedia graph visualization enabling spatial exploration of 500+ interconnected article-nodes.}
+	    \resumeItem{Configured automated code quality tooling (TypeScript strict mode, ESLint, Prettier, Husky pre-commit hooks).}
+	    \resumeItem{Optimized rendering performance by caching sprites, preventing unnecessary re-renders during node interactions.}
+	\resumeItemListEnd
+
+	\resumeProjectHeading{\textbf{\href{https://github.com/jiu-jitsu-autoscoring}{jiu-jitsu-autoscoring}} $\Diamond$ {\footnotesize Python, Jupyter, PyTorch, Transformers}}{\emph{Jan. 2025 -- Present}}
+        \resumeItemListStart
+	  \resumeItem{Developing 5-step ML pipeline to automatically score Brazilian Jiu-Jitsu match videos using computer vision.}
+	  \resumeItem{Fine-tuning pre-trained PyTorch models via HuggingFace Transformers for person detection, pose estimation, and classification on annotated BJJ dataset.}
+        \resumeItemListEnd
+
+	\resumeProjectHeading{\textbf{\href{https://github.com/marceloponceardon/CTF427}{CTF427}} $\Diamond$ {\footnotesize VirtualBox, Docker, CTFd, Kali Linux}}{\emph{Jan. 2025 -- March 2025}}
+        \resumeItemListStart
+	  \resumeItem{Ran competitive CTF event teaching 20+ students about security vulnerabilities (SQLi, cryptography, binary exploitation, forensics).}
+	  \resumeItem{Built vulnerable web applications and hosted via Docker containers on VirtualBox VM with CTFd scoreboard platform.}
+        \resumeItemListEnd
+
+	\resumeProjectHeading{\textbf{\href{https://github.com/opalescencelabs}{Opalescence}} $\Diamond$ {\footnotesize GoLang, PostgreSQL, Redis, OAuth2.0}}{\emph{Jan. 2024 -- April 2024}}
+        \resumeItemListStart
+	  \resumeItem{Co-led team of 7 building web-based note-taking application, overseeing backend architecture and development.}
+	  \resumeItem{Implemented RESTful API with GoLang (GinGonic), PostgreSQL (GORM), Redis caching, GitHub Actions CI/CD, and Google OAuth2.0 authentication.}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{\textbf{EXPERIENCE}}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{IT Administrative Support} $\Diamond$ CANVAS Programs}{\emph{Sept. 2025 -- Present}}
+    \resumeItemListStart
+      \resumeItem{Deployed organization-wide security solutions: Bitwarden password manager with 2FA and anti-virus across 14+ devices.}
+      \resumeItem{Managed user account lifecycle, access controls, and daily troubleshooting for hardware/software issues.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading{\textbf{Barista} $\Diamond$ Claudia's Coffee}{\emph{March 2023 -- Present}}
+    \resumeItemListStart
+      \resumeItem{Prepared 45+ specialty drinks per hour in fast-paced environment; independently managed opening/closing operations.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{\textbf{SKILLS}}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+	\textbf{Languages:} Python, TypeScript/JavaScript, GoLang, C/C++, Java, C\#, SQL, Bash, HTML/CSS\\
+	\textbf{Frameworks \& Libraries:} Next.js, React, Node.js, PyTorch, scikit-learn, Pandas, NumPy\\
+	\textbf{Tools \& Technologies:} Docker, Git, GitHub Actions, Jupyter, LaTeX\\
+	\textbf{Databases:} PostgreSQL, MySQL, Redis, SQLite, Cassandra\\
+	\textbf{Other:} AWS, Linux, Agile/Scrum, Automated Testing\\
+	$\Diamond$ \textit{Fluent: English, Spanish}\\
+  }}
+\end{itemize}
+
+\end{document}
